@@ -1,16 +1,20 @@
 import Category from "./components/Category";
 import Pages from "./pages/Pages";
-import {BrowserRouter as Router} from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
+import Search from "./components/Search";
 
 function App() {
   return (
-   <Router>
-     <div className="App">
-      <Category/>  
-     <Pages/>
-     </div>
-   </Router>
- 
+
+    <div className="App">
+      <Router>
+        <Search />
+        <Category />
+        <Pages />
+      </Router>
+    </div>
+
+
   );
 }
 

@@ -8,22 +8,22 @@ import {NavLink} from 'react-router-dom'
 function Categoty() {
   return (
     <List>
-        <NavLink to={'/Cuisine/Italian'}>
+        <Slink to={'/Cuisine/Italian'}>
             <FaPizzaSlice/>
             <h4>Italian</h4>
-        </NavLink >
-        <NavLink to={'/Cuisine/American'}>
+        </Slink >
+        <Slink to={'/Cuisine/American'}>
             <FaHamburger/>
             <h4>American</h4>
-        </NavLink >
-        <NavLink to={'/Cuisine/Thai'}>
+        </Slink >
+        <Slink to={'/Cuisine/Thai'}>
             <GiNoodles/>
             <h4>Thai</h4>
-        </NavLink >
-        <NavLink to={'/Cuisine/Japanese'}>
+        </Slink >
+        <Slink to={'/Cuisine/Japanese'}>
             <GiChopsticks/>
             <h4>Japanese</h4>
-        </NavLink >
+        </Slink >
         
 
 
@@ -35,7 +35,7 @@ display:flex;
 justify-content:center;
 margin:2rem 0rem;
 `
-const SlInk=styled(NavLink)`
+const Slink=styled(NavLink)`
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -50,10 +50,11 @@ background:linear-gradient(35deg,#494949, #313131);
  
 h4{
     color:white;    
+    font-size:0.8rem;
 }
 svg{
   color:white;
-  fontsize:1.5rem;
+  font-size:1.5rem;
 }
 &.active{
     background:linear-gradient(to right, #f27121, #e94057) ;

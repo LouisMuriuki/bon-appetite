@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
+import { NavLink } from 'react-router-dom'
 
 function Popular() {
 
@@ -42,9 +43,11 @@ function Popular() {
                         return (
                             <SplideSlide ket={recipe.id}>
                                 <Card>
+                                    <NavLink to={'/Recipes/'+recipe.id}>
                                     <p>{recipe.title}</p>
                                     <img src={recipe.image} alt={recipe.title} />
                                     <Gradient />
+                                    </NavLink>
                                 </Card>
                             </SplideSlide>
                         )
@@ -56,11 +59,11 @@ function Popular() {
     )
 }
 const Wrapper = styled.div`
-margin:4rem 0rem;
+margin:5rem 0rem;
 `
 const Card = styled.div`
 min-height:20rem;
-border-radius:3px; 
+border-radius:5px; 
 overflow:hidden;
 position:relative;
 

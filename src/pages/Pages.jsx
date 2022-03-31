@@ -12,6 +12,7 @@ function Pages() {
 <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname }>
         <Route path='/' element={<Home/>}/>
+        <Route path='/bon-appetite/' element={<Home/>}/>
         <Route path='/Cuisine/:type' element={<Cuisine/>}/>
         <Route path='/Searched/:search' element={<Searched/>}/>
         <Route path='/recipes/:name' element={<Recipes/>}/>

@@ -37,11 +37,11 @@ function Popular() {
                     arrows: false,
                     pagination: false,
                     drag: "free",
-                    gap: '5rem'
+                    gap: '3rem'
                 }}>
                     {popular.map(recipe => {
                         return (
-                            <SplideSlide ket={recipe.id}>
+                            <SplideSlide key={recipe.id}>
                                 <Card>
                                     <NavLink to={'/Recipes/'+recipe.id}>
                                     <p>{recipe.title}</p>

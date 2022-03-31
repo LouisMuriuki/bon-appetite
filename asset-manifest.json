@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/bon-appetite/static/css/main.1b647e25.css",
-    "main.js": "/bon-appetite/static/js/main.ea3e0167.js",
+    "main.js": "/bon-appetite/static/js/main.5120cd1b.js",
     "index.html": "/bon-appetite/index.html",
     "main.1b647e25.css.map": "/bon-appetite/static/css/main.1b647e25.css.map",
-    "main.ea3e0167.js.map": "/bon-appetite/static/js/main.ea3e0167.js.map"
+    "main.5120cd1b.js.map": "/bon-appetite/static/js/main.5120cd1b.js.map"
   },
   "entrypoints": [
     "static/css/main.1b647e25.css",
-    "static/js/main.ea3e0167.js"
+    "static/js/main.5120cd1b.js"
   ]
 }

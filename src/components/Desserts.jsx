@@ -4,23 +4,23 @@ import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
 import { NavLink } from 'react-router-dom'
 
-function Veggie() {
-    const [veggie, setVeggie] = useState([])
+function Dessert() {
+    const [dessert, setDessert] = useState([])
     useEffect(() => {
-        getVeggie()
+        getDessert()
 
     }, [])
 
-    const getVeggie = async () => {
-        const check = localStorage.getItem('veggie')
+    const getDessert = async () => {
+        const check = localStorage.getItem('dessert')
         if (check) {
-            setVeggie(JSON.parse(check))
+            setDessert(JSON.parse(check))
         }
         else {
-            const Api = await fetch('https://api.spoonacular.com/recipes/random?number=20&apiKey=d1d022ffa3fb42b58d9f7c249b31f7e8&tags=vegetarian')
+            const Api = await fetch('https://api.spoonacular.com/recipes/random?number=20&apiKey=d1d022ffa3fb42b58d9f7c249b31f7e8&tags=dessert')
             const data = await Api.json()
-            localStorage.setItem("veggie",JSON.stringify(data.recipes))
-            setVeggie(data.recipes)
+            localStorage.setItem("dessert",JSON.stringify(data.recipes))
+            setDessert(data.recipes)
             console.log(data.recipes)
         }
 
@@ -30,15 +30,15 @@ function Veggie() {
     <div>
         <div>
             <Wrapper>
-                <h3>Vegaterian corner</h3>
+                <h3>Desserts</h3>
                 <Splide options={{
-                    perPage: 3,
+                    perPage: 4,
                     arrows: true,
                     pagination: false,
                     drag: "free",
-                    gap: '5rem'
+                    gap: '15rem'
                 }}>
-                    {veggie.map(recipe => {
+                    {dessert.map(recipe => {
                         return (
                             <SplideSlide key={recipe.id}>
                                 <Card>
@@ -62,14 +62,14 @@ const Wrapper = styled.div`
 margin:4rem 0rem;
 `
 const Card = styled.div`
-width:355px;
 min-height:20rem;
+width:300px;
 border-radius:15px; 
 overflow:hidden;
 position:relative;
 
  img{
-    border-radius:3px;   
+    border-radius:5px;   
     position:absolute;
     left:0;
     width:100%;
@@ -100,4 +100,4 @@ height:100%;
 background:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
 `
 
-export default Veggie
+export default Dessert

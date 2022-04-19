@@ -18,7 +18,7 @@ function Popular() {
             setPopular(JSON.parse(check))
         }
         else {
-            const Api = await fetch('https://api.spoonacular.com/recipes/random?number=9&apiKey=d1d022ffa3fb42b58d9f7c249b31f7e8')
+            const Api = await fetch('https://api.spoonacular.com/recipes/random?number=20&apiKey=d1d022ffa3fb42b58d9f7c249b31f7e8')
             const data = await Api.json()
             localStorage.setItem("popular",JSON.stringify(data.recipes))
             setPopular(data.recipes)
@@ -34,10 +34,10 @@ function Popular() {
                 <h3>Popular Picks</h3>
                 <Splide options={{
                     perPage: 4,
-                    arrows: false,
+                    arrows: true,
                     pagination: false,
                     drag: "free",
-                    gap: '3rem'
+                    gap: '15rem'
                 }}>
                     {popular.map(recipe => {
                         return (
@@ -63,7 +63,8 @@ margin:5rem 0rem;
 `
 const Card = styled.div`
 min-height:20rem;
-border-radius:5px; 
+width:300px;
+border-radius:15px; 
 overflow:hidden;
 position:relative;
 

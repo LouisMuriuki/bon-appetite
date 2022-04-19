@@ -3,7 +3,8 @@ import Pages from "./pages/Pages";
 import { BrowserRouter as Router, NavLink } from 'react-router-dom'
 import Search from "./components/Search";
 import styled from "styled-components";
-import {GiKnifeFork} from "react-icons/gi"
+import { GiKnifeFork } from "react-icons/gi"
+import './index.css'
 
 function App() {
   return (
@@ -14,8 +15,13 @@ function App() {
           <GiKnifeFork></GiKnifeFork>
           <Logo to={'/'}>Sweeeet</Logo>
         </Nav>
-        <Search />
-        <Category />
+        <div className="dessert" >
+          <>
+            <Search/>
+            <Category />
+          </>
+
+        </div>
         <Pages />
       </Router>
     </div>
@@ -23,14 +29,14 @@ function App() {
 
   );
 }
-const Logo=styled(NavLink)`
+const Logo = styled(NavLink)`
 text-decoration:none;
 font-size:1.5rem;
 font-weight:400;
 font-family:'Lobster two', cursive;
 
 `
-const Nav=styled.div`
+const Nav = styled.div`
 padding: 4rem 0rem;
 display:flex;
 justify-content:flex-start;

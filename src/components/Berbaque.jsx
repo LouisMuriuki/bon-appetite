@@ -4,23 +4,23 @@ import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
 import { NavLink } from 'react-router-dom'
 
-function Veggie() {
-    const [veggie, setVeggie] = useState([])
+function Berbaque() {
+    const [berbaque, setberbaque] = useState([])
     useEffect(() => {
-        getVeggie()
+        getberbaque()
 
     }, [])
 
-    const getVeggie = async () => {
-        const check = localStorage.getItem('veggie')
+    const getberbaque = async () => {
+        const check = localStorage.getItem('berbaque')
         if (check) {
-            setVeggie(JSON.parse(check))
+            setberbaque(JSON.parse(check))
         }
         else {
-            const Api = await fetch('https://api.spoonacular.com/recipes/random?number=20&apiKey=d1d022ffa3fb42b58d9f7c249b31f7e8&tags=vegetarian')
+            const Api = await fetch('https://api.spoonacular.com/recipes/random?number=20&apiKey=d1d022ffa3fb42b58d9f7c249b31f7e8&tags=pork')
             const data = await Api.json()
-            localStorage.setItem("veggie",JSON.stringify(data.recipes))
-            setVeggie(data.recipes)
+            localStorage.setItem("berbaque",JSON.stringify(data.recipes))
+            setberbaque(data.recipes)
             console.log(data.recipes)
         }
 
@@ -30,7 +30,7 @@ function Veggie() {
     <div>
         <div>
             <Wrapper>
-                <h3>Vegaterian corner</h3>
+                <h3>Pork Bowl</h3>
                 <Splide options={{
                     perPage: 3,
                     arrows: true,
@@ -38,7 +38,7 @@ function Veggie() {
                     drag: "free",
                     gap: '5rem'
                 }}>
-                    {veggie.map(recipe => {
+                    {berbaque.map(recipe => {
                         return (
                             <SplideSlide key={recipe.id}>
                                 <Card>
@@ -100,4 +100,4 @@ height:100%;
 background:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
 `
 
-export default Veggie
+export default Berbaque

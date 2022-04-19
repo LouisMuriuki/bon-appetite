@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/bon-appetite/static/css/main.1b647e25.css",
-    "main.js": "/bon-appetite/static/js/main.5120cd1b.js",
+    "main.css": "/bon-appetite/static/css/main.b92dbd3a.css",
+    "main.js": "/bon-appetite/static/js/main.1481b0ce.js",
+    "static/media/dessert.jpg": "/bon-appetite/static/media/dessert.24b373774d655f3cd77c.jpg",
     "index.html": "/bon-appetite/index.html",
-    "main.1b647e25.css.map": "/bon-appetite/static/css/main.1b647e25.css.map",
-    "main.5120cd1b.js.map": "/bon-appetite/static/js/main.5120cd1b.js.map"
+    "main.b92dbd3a.css.map": "/bon-appetite/static/css/main.b92dbd3a.css.map",
+    "main.1481b0ce.js.map": "/bon-appetite/static/js/main.1481b0ce.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b647e25.css",
-    "static/js/main.5120cd1b.js"
+    "static/css/main.b92dbd3a.css",
+    "static/js/main.1481b0ce.js"
   ]
 }
